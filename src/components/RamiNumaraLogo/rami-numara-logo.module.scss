@@ -1,0 +1,16 @@
+@use '../../style/global';
+
+.root {
+  display: inline-block;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: global.$secondary-color;
+  justify-content: center;
+  margin: 0 global.$space;
+  padding: global.$space;
+  border: 4px solid global.$secondary-color;
+  white-space: nowrap;
+}

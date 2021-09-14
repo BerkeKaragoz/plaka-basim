@@ -1,0 +1,182 @@
+@use '../../style/global';
+
+.root {
+  position: fixed;
+  width: 100%;
+  height: global.$space-content;
+  background-color: global.$primary-color;
+  z-index: 10;
+  box-shadow: 0px 0px 10px 2px #0008;
+  color: global.$secondary-color;
+}
+
+.navContainer {
+  display: flex;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: global.$space * 2;
+  max-width: global.$screen-size-lg;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: global.$space;
+}
+
+.spacing {
+  height: global.$space-content;
+  background-color: red;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.a {
+  margin: global.$space;
+  font-size: global.$font-size-small;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 180ms;
+}
+
+.menu {
+  text-align: right;
+  display: none;
+  position: fixed;
+  border-radius: 0 0 global.$space-gutter global.$space-gutter;
+  border: 2px solid rgba(global.$primary-color, 0.5);
+  background-color: #fafafa;
+  width: 100%;
+  padding-top: global.$space;
+  padding-bottom: global.$space;
+  box-shadow: 0px -3px 25px 0px #000a;
+  z-index: 9;
+}
+
+.menuOpen {
+  display: none;
+}
+
+.menuItem {
+  display: block;
+  text-decoration: none;
+  padding: global.$space * 2;
+  margin: global.$space;
+  font-weight: global.$font-weight-bold;
+  font-size: global.$font-size-bigger;
+  color: global.$primary-color;
+}
+
+.menuItem::after {
+  content: "";
+  display: flex;
+  position: relative;
+  bottom: -2px;
+  background-color: global.$primary-color;
+  padding: 2px 0 0 0;
+  border-radius: 100% 0 0 0;
+  opacity: 0.1;
+  transition: 0.2s;
+}
+
+.menuItem:hover::after {
+  padding: 2px 0 0 0;
+  opacity: 1;
+}
+
+.menuItem:hover {
+  background-color: #0001;
+  border-radius: 5px;
+}
+
+.a:hover {
+  text-decoration-color: initial;
+}
+
+.a:not(:first-of-type)::before {
+  content: "|";
+  vertical-align: 1px;
+  opacity: 0.75;
+  margin-right: global.$space * 2;
+}
+
+.mobileButton {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: global.$screen-size-sm) {
+  .nav {
+    display: none;
+  }
+  .mobileNav {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .menuOpen {
+    display: block;
+    animation-name: slidein;
+    animation-duration: 0.5s;
+  }
+
+  .menuClosed {
+    display: block;
+    animation-name: slideout;
+    animation-duration: 0.25s;
+    visibility: hidden;
+    transform: translateY(-110%);
+  }
+
+  .backdrop {
+    position: fixed;
+    background: #0006;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    animation-name: fadein;
+    animation-duration: 0.4s;
+  }
+
+  @keyframes slidein {
+    from {
+      transform: translateY(-100%);
+    }
+
+    to {
+      transform: none;
+    }
+  }
+
+  @keyframes slideout {
+    from {
+      visibility: visible;
+      transform: none;
+    }
+
+    to {
+      transform: translateY(-110%);
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}

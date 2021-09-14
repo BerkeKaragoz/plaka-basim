@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import HeroPaper from '../components/HeroPaper/HeroPaper.tsx'
+import Paper from '../components/_shared/Paper/Paper.tsx'
+
+const { content } = Astro.props;
+---
+<BaseLayout title={content.title}>
+    <HeroPaper>
+        <slot/>
+    </HeroPaper>
+</BaseLayout>

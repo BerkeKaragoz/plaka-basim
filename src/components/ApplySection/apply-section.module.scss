@@ -1,0 +1,16 @@
+@use '../../style/global.scss';
+
+.root {
+  padding: global.$space-gutter * 2;
+  margin-bottom: global.$space-gutter;
+  background-color: global.$primary-color;
+  text-align: center;
+}
+
+.text {
+  color: global.$secondary-color;
+}
+
+.button {
+  margin: global.$space-gutter;
+}

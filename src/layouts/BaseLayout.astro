@@ -1,0 +1,34 @@
+---
+import '../style/base.scss';
+import Header from '../components/Header/Header.tsx';
+import Footer from '../components/Footer/Footer.tsx';
+import FloatingButton from '../components/_shared/FloatingButton/FloatingButton.tsx';
+
+const {title} = Astro.props;
+const googleMeasurementId = "G-L3W4MVQFCG";
+---
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{title}</title>
+        <link rel="icon" type="image/svg+xml" href="/Rfav.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src={"https://www.googletagmanager.com/gtag/js?id=" + googleMeasurementId}></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', googleMeasurementId);
+        </script>
+    </head>
+    <body>
+        <Header client:load/>
+        <main>
+            <slot />
+        </main>
+        <Footer/>
+        <a href="https://api.whatsapp.com/send?phone=+905327357272&text=Merhaba,%20"><FloatingButton className='floatingWhatsapp'>whatsapp</FloatingButton></a>
+  </body>
+</html>

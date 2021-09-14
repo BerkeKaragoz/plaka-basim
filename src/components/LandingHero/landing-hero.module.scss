@@ -1,0 +1,43 @@
+@use '../../style/global.scss';
+
+.container {
+  position: relative;
+}
+
+.image {
+  --blur-amount: 3px;
+  width: calc(100% + var(--blur-amount) * 2);
+  height: calc(100% + var(--blur-amount) * 4);
+  margin-top: calc(var(--blur-amount) * -2);
+  background-image: url("/img/landing-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(var(--blur-amount));
+}
+.imageContainer {
+  height: 60vh;
+  overflow: hidden;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateY(-50%);
+}
+.contentText {
+  color: global.$secondary-color;
+  text-shadow: 1px 1px 0.5px #f0f0f0, 2px 2px 0.5px #aaa, 3px 3px 0.5px #555,
+    0px 0px 30px #000, 0px 0px 50px #000, 0px 0px 10px #000;
+  font-size: clamp(2rem, 8vw, 8vh);
+  font-weight: 500;
+}
+.contentSubtitle {
+  text-align: center;
+  color: global.$secondary-color;
+  text-shadow: 1px 2px #555, 0px 0px 10px #000;
+  font-size: clamp(1rem, 3vw, 4vh);
+  font-weight: 500;
+}

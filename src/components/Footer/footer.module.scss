@@ -1,0 +1,38 @@
+@use "../../style/global.scss";
+
+.root {
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+.content {
+  margin: global.$space-gutter * 2 auto global.$space-gutter * 2 auto;
+  max-width: global.$screen-size-lg;
+}
+.map {
+  width: 100%;
+  margin-bottom: -5px;
+}
+.lowerBar {
+  padding: 5px;
+  background-color: #eee;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.grid {
+  text-align: start;
+}
+
+.divider {
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: global.$screen-size-sm) {
+  .grid {
+    grid-auto-rows: minmax(32px, auto);
+    padding: global.$space;
+  }
+}

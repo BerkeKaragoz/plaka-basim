@@ -1,0 +1,83 @@
+@use './variables.scss' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  font-family: -apple-system, Roboto, BlinkMacSystemFont, Segoe UI, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 1rem;
+  --user-font-scale: 1rem - 16px;
+  font-size: clamp(
+    0.925rem,
+    0.4626rem + 1.0309vw + var(--user-font-scale),
+    1.125rem
+  );
+  color: black;
+}
+
+body {
+  background-color: $background-color;
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+@mixin grid($no) {
+  .grid-#{$no} {
+    display: grid;
+    grid-template-columns: repeat($no, 1fr);
+    gap: $space-gutter;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .grid-#{$no} {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@mixin gi($no, $direction: column) {
+  @if $direction != row and $direction != column {
+    @error "Direction #{$direction} must be either row or column.";
+  }
+
+  .gi-#{$no} {
+    grid-#{$direction}: $no;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .gi-#{$no} {
+      grid-#{$direction}: 1;
+    }
+  }
+}
+
+@include grid(1);
+@include grid(2);
+@include grid(3);
+@include grid(4);
+
+@include gi(1);
+@include gi(2);
+@include gi(3);
+@include gi(4);
+
+.flex {
+  display: flex;
+  gap: $space-gutter;
+  align-items: center;
+  justify-content: center;
+}
+
+.floatingWhatsapp {
+  bottom: $space-gutter;
+  right: $space-gutter;
+  color: white;
+  background-color: #25d366;
+}

@@ -1,0 +1,40 @@
+@use '../../../style/global.scss';
+
+.root {
+  font-style: normal;
+  margin: global.$space;
+}
+
+.caption {
+  font-size: global.$font-size-small;
+}
+
+.heading {
+  font-size: global.$font-size-bigger;
+  margin: global.$space * 2;
+}
+
+.headline {
+  font-size: global.$font-size-headline;
+  //font-weight: global.$font-weight-bold;
+  //color: global.$primary-color;
+  margin: global.$space * 2 global.$space-gutter global.$space-gutter
+    global.$space-gutter;
+}
+
+.light {
+  font-weight: global.$font-weight-thin;
+  font-size: global.$font-size-small;
+}
+
+.bold {
+  font-weight: global.$font-weight-bold;
+}
+
+.noGutters {
+  margin: 0;
+}
+
+.noDecoration {
+  text-decoration: none;
+}

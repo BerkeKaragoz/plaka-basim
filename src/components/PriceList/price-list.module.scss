@@ -1,0 +1,40 @@
+@use '../../style/global.scss';
+
+.table {
+  display: inline-block;
+  border-radius: global.$space;
+  overflow-x: auto;
+  border-collapse: collapse;
+  box-shadow: 0px 1px 6px -2px #000a;
+  max-width: 100%;
+}
+
+.table th {
+  color: global.$secondary-color;
+  background-color: global.$primary-color;
+}
+
+.table th,
+.table td {
+  padding: global.$space-gutter * 1.5;
+  border-bottom: 1px solid #0002;
+}
+
+.table tr:nth-child(2) {
+  background-color: rgba(global.$primary-color, 0.025);
+}
+
+.table tr:hover {
+  background-color: rgba(global.$primary-color, 0.05);
+}
+
+.table th:first-of-type {
+  text-align: start;
+}
+
+@media only screen and (max-width: global.$screen-size-sm) {
+  .table th,
+  .table td {
+    padding: global.$space-gutter;
+  }
+}

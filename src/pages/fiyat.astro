@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import PageHero from '../components/PageHero/PageHero.tsx'
+import PriceList from '../components/PriceList/PriceList.tsx'
+import '../style/fiyat.scss';
+
+---
+<BaseLayout title='Rami Numara | Fiyat Listesi'>
+    <PageHero title='Fiyat Listesi'/>
+    <section class='price-list'>
+        <PriceList />
+    </section>
+</BaseLayout>

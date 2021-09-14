@@ -1,0 +1,9 @@
+@use '../../../style/global.scss';
+
+.root {
+  box-shadow: 0px 1px 6px -2px #000a;
+  border-radius: global.$space;
+  padding: global.$space-gutter;
+  background-color: global.$background-color;
+  overflow: auto;
+}

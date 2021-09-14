@@ -1,0 +1,6 @@
+@use './global.scss';
+
+.price-list {
+  text-align: center;
+  padding: global.$space-content global.$space-gutter;
+}
