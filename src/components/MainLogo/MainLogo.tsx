@@ -1,10 +1,10 @@
-import styles from "./rami-numara-logo.module.scss";
+import styles from "./main-logo.module.scss";
 
 const RamiNumaraLogo = () => {
   return (
     <div className={styles.root}>
       <a href={"/"} className={styles.link}>
-        <h3>Rami Numara</h3>
+        <h3>Rami Plaka Basım</h3>
       </a>
     </div>
   );

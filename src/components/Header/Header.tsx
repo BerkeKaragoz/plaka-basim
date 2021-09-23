@@ -1,30 +1,30 @@
 import { useState } from "preact/hooks";
 
-import RamiNumaraLogo from "../RamiNumaraLogo/RamiNumaraLogo";
+import MainLogo from "../MainLogo/MainLogo";
 import styles from "./header.module.scss";
 import Icon from "../_shared/Icon/Icon";
 import clsx from "clsx";
 import Text from "../_shared/Text/Text";
 
-const items = [
+const items: Array<NavigationItem> = [
   {
     text: "Anasayfa",
     link: "/",
     icon: `<HomeIcon />`,
   },
   {
-    text: "Fiyat Listesi",
-    link: "/fiyat",
-    icon: `<LocalOfferIcon />`,
-  },
-  {
-    text: "Numara Başvurusu",
-    link: "/basvuru",
+    text: "Plaka Basım",
+    link: "/plaka-basim",
     icon: `<DescriptionIcon />`,
   },
   {
+    text: "Plaka Yenileme",
+    link: "/plaka-yenileme",
+    icon: `<InfoIcon />`,
+  },
+  {
     text: "Hakkımızda",
-    link: "/hakkimizda",
+    link: "/#hakkimizda",
     icon: `<InfoIcon />`,
   },
 ];
@@ -43,7 +43,7 @@ const Header = () => {
       <header className={styles.root}>
         <div className={styles.navContainer}>
           <div className={styles.logoContainer}>
-            <RamiNumaraLogo />
+            <MainLogo />
             <div>
               <Text
                 as="h5"
@@ -85,7 +85,14 @@ const Header = () => {
         })}
       >
         {items.map((item, index) => (
-          <a color="inherit" href={item.link} className={styles.menuItem}>
+          <a
+            color="inherit"
+            href={item.link}
+            className={styles.menuItem}
+            onClick={() => {
+              setIsMenuOpen(false);
+            }}
+          >
             {item.text}
           </a>
         ))}

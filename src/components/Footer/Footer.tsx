@@ -6,6 +6,7 @@ import Icon from "../_shared/Icon/Icon";
 export default function Footer() {
   return (
     <footer className={styles.root}>
+      <span id="iletisim" class="anchor"></span>
       <hr className={styles.divider} />
       <div className={styles.content}>
         <Text headline>İletişim</Text>
@@ -40,8 +41,8 @@ export default function Footer() {
             <Icon className={styles.icon} style={{ color: "rgb(244, 180, 0)" }}>
               mail
             </Icon>
-            <Text as="a" href="mailto:raminumara@gmail.com">
-              raminumara@gmail.com
+            <Text as="a" href="mailto:rami.trafik@hotmail.com.tr">
+              rami.trafik@hotmail.com.tr
             </Text>
           </div>
 
@@ -76,7 +77,7 @@ export default function Footer() {
       <div className={styles.lowerBar}>
         <hr className={styles.divider} />
         <Text caption disableGutters>
-          Rami Numara © {new Date().getUTCFullYear()}.
+          Rami Plaka Basım © {new Date().getUTCFullYear()}.
         </Text>
       </div>
     </footer>

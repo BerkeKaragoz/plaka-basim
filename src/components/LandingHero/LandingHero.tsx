@@ -7,8 +7,8 @@ export const LandingHero = (props) => {
         <div className={s.image} />
       </div>
       <div className={s.content}>
-        <h2 className={s.contentSubtitle}>Şase / Motor</h2>
-        <h1 className={s.contentText}>Numara Çakım Merkezi</h1>
+        <h1 className={s.contentSubtitle}>Rami</h1>
+        <h1 className={s.contentText}>Plaka Basım</h1>
       </div>
     </section>
   );

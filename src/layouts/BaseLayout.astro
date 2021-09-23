@@ -5,7 +5,6 @@ import Footer from '../components/Footer/Footer.tsx';
 import FloatingButton from '../components/_shared/FloatingButton/FloatingButton.tsx';
 
 const {title} = Astro.props;
-const googleMeasurementId = "G-L3W4MVQFCG";
 ---
 <html lang="en">
     <head>
@@ -14,13 +13,13 @@ const googleMeasurementId = "G-L3W4MVQFCG";
         <title>{title}</title>
         <link rel="icon" type="image/svg+xml" href="/Rfav.png">
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src={"https://www.googletagmanager.com/gtag/js?id=" + googleMeasurementId}></script>
+        <script async src={"https://www.googletagmanager.com/gtag/js?id=G-8ZB6HGC1H9"}></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', googleMeasurementId);
+            gtag('config', "G-8ZB6HGC1H9");
         </script>
     </head>
     <body>
@@ -29,6 +28,8 @@ const googleMeasurementId = "G-L3W4MVQFCG";
             <slot />
         </main>
         <Footer/>
-        <a href="https://api.whatsapp.com/send?phone=+905327357272&text=Merhaba,%20"><FloatingButton className='floatingWhatsapp'>whatsapp</FloatingButton></a>
+        <a href="https://api.whatsapp.com/send?phone=+905327357272&text=Merhaba,%20">
+            <FloatingButton className='floatingWhatsapp'>whatsapp</FloatingButton>
+        </a>
   </body>
 </html>
