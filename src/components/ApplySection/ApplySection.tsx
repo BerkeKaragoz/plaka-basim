@@ -6,7 +6,7 @@ const ApplySection = (props) => {
   return (
     <section className={s.root}>
       <Text heading className={s.text}>
-        Rami Plaka Basım'a başvuru nasıl yapılır?
+        Rami Plaka'ya başvuru nasıl yapılır?
       </Text>
       <a href="/#iletisim">
         <Button className={s.button}>BİZE ULAŞIN</Button>

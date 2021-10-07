@@ -1,9 +1,9 @@
 ---
 layout: ../layouts/HeroPaperLayout.astro
-title: Rami Plaka Basım | Rehber
+title: Rami Plaka | Rehber
 ---
 
-# Plaka Basım Rehberi
+# Plaka Bastırma Rehberi
 
 Plaka zayi işlemleri, zayi olan plakalarınızın tekrar çıkarılması için gerekli olan işlemlerdir.
 Plaka zayi işlemleri için gerekli evraklar:\

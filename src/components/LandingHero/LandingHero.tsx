@@ -8,7 +8,7 @@ export const LandingHero = (props) => {
       </div>
       <div className={s.content}>
         <h1 className={s.contentSubtitle}>Rami</h1>
-        <h1 className={s.contentText}>Plaka Basım</h1>
+        <h1 className={s.contentText}>Plaka Bastırma</h1>
       </div>
     </section>
   );

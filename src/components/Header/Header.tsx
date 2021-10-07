@@ -13,8 +13,8 @@ const items: Array<NavigationItem> = [
     icon: `<HomeIcon />`,
   },
   {
-    text: "Plaka Basım",
-    link: "/plaka-basim",
+    text: "Plaka Bastırma",
+    link: "/plaka-bastirma",
     icon: `<DescriptionIcon />`,
   },
   {
