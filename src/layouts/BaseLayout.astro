@@ -13,13 +13,14 @@ const {title} = Astro.props;
         <title>{title}</title>
         <link rel="icon" type="image/svg+xml" href="/Rfav.png">
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src={"https://www.googletagmanager.com/gtag/js?id=G-8ZB6HGC1H9"}></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-218084417-2">
+        </script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-            gtag('config', "G-8ZB6HGC1H9");
+          gtag('config', 'UA-218084417-2');
         </script>
     </head>
     <body>
